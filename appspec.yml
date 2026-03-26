@@ -1,0 +1,13 @@
+
+version: 0.1
+os: linux
+
+files:
+  - source: /index.html
+    destination: /var/www/html
+
+hooks:
+  AfterInstall:
+    - location: scripts/install.sh
+      timeout: 300
+      runas: root
