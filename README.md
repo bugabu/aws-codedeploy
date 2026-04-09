@@ -1,6 +1,9 @@
 # aws-codedeploy
 
-EC2 instance configuration:
+# Code Deployement group permissions
+arn:aws:iam::accountID:role/CodeDeployServiceRole
+
+# EC2 instance configuration
 The EC2 instance must have an IAM role with CodeDeploy permissions.
 
 {
