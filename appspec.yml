@@ -1,14 +1,18 @@
-version: 0.0
+version: "0.0"
 os: linux
 
 files:
   - source: index.html
-    destination: /var/www/html
+    destination: /var/www/html/
   - source: scripts/nginx.conf
-    destination: /etc/nginx
+    destination: /etc/nginx/
 
 hooks:
   BeforeInstall:
-    - location: scripts/install.sh
+    - location: scripts/before_install.sh
+      runas: root
+  
+  AfterInstall:
+    - location: scripts/after_install.sh
       runas: root
 
